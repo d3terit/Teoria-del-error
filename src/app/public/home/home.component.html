@@ -1,5 +1,15 @@
 <div id="container" class="pg-container w-12">
-    <section data-anchor="Concepto" id="Concepto" class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page pg-active">
+    <section data-anchor="Inicio" id="Inicio" class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page pg-active">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-5xl lg:text-8xl mb-5 ">Teoría del error</h1>
+            <p-divider align="center"><span class="p-tag lg:text-xl font-bold">Presentado por:</span></p-divider>
+            <ul class="text-2xl lg:text-5xl flex flex-column align-items-center mt-4">
+                <li>Daniel Hernando Mantilla</li>
+                <li>Carlos David Suarez Cortes</li>
+            </ul>
+        </div>
+    </section>
+    <section data-anchor="Concepto" id="Concepto" class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page pg-active ">
         <div class="w-10 lg:w-7 ">
             <h1 class="text-center text-4xl lg:text-7xl mb-5 ">Teoría del error</h1>
             <p-divider align="center"><span class="p-tag lg:text-lg ">Concepto</span></p-divider>
@@ -10,27 +20,25 @@
     </section>
 
     <p-divider></p-divider>
-    <section data-anchor="Representacion" id="Representacion " class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
-        <div class="w-10 lg:w-7">
-            <h1 class="text-center text-4xl lg:text-6xl mb-5">Representación numérica</h1>
-            <p-divider align="center"><span class="p-tag lg:text-lg">Introducción</span> </p-divider>
-            <div class="mt-5">
+    <section data-anchor="Representacion" id="Representacion " class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page ">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Representación numérica</h1>
+            <p-divider align="center"><span class="p-tag lg:text-lg ">Introducción</span> </p-divider>
+            <div class="mt-5 ">
                 <p-tabView>
-                    <p-tabPanel header="Conversión" tooltip="Conversión de base numeral">
-                        <p class="text-center text-xl lg:text-2xl">Son errores que existen en los valores de los datos, causados por incertidumbre en las mediciones, por verdaderas equivocaciones, o por la naturaleza necesariamente aproximada de la representación, mediante un número finito de
-                            dígitos, de cantidades que no pueden representarse exactamente con el número de dígitos permisible.</p>
+                    <p-tabPanel header="Conversión de base" tooltip="Conversión de base numeral ">
+                        <p class="text-center text-xl lg:text-2xl ">Para convertir desde cada uno de los sistemas numéricos hacia el decimal, el procedimiento es el que se ha seguido hasta el momento: multiplicar el valor de cada dígito por el peso de su posición según la base del sistema que se
+                            esté tratando.</p>
 
                     </p-tabPanel>
-                    <p-tabPanel header="Fraccionarios" tooltip="Conversión de fraccionarios">
-                        <p class="text-center text-xl lg:text-2xl"> Representan la diferencia entre una formulación matemática exacta de un problema y la aproximación dada por un método numérico.</p>
-                    </p-tabPanel>
-                    <p-tabPanel header="Punto fijo" tooltip="Representación de punto fijo">
-                        <p class="text-center text-xl lg:text-2xl">Es un error que ocurre cuando un programa recibe un número, valor o variable fuera del alcance de su capacidad de manejo. Este tipo de error es algo común en la programación, especialmente cuando se trata de enteros u otros tipos
-                            numéricos de variables.
+                    <p-tabPanel header="Punto fijo " tooltip="Representación de punto fijo ">
+                        <p class="text-center text-xl lg:text-2xl ">El punto binario se encuentra siempre en la misma posición, es decir, existirán m bits para la parte entera y n bits para la parte decimal. En algunos casos puede ocurrir que 0 = m (no existe parte entera) o bien, 0 = n (no existe
+                            parte decimal).
                         </p>
                     </p-tabPanel>
-                    <p-tabPanel header="Punto flotante" tooltip="Representación de punto flotante">
-                        <p class="text-center text-xl lg:text-2xl">Se deben a que solo pueden presentar cantidades con un numero finito de dígitos.
+                    <p-tabPanel header="Punto flotante " tooltip="Representación de punto flotante ">
+                        <p class="text-center text-xl lg:text-2xl "> Es una forma de notación científica usada en los computadores con la cual se pueden representar números reales extremadamente grandes y pequeños de una manera muy eficiente y compacta, y con la que se pueden realizar operaciones
+                            aritméticas.
                         </p>
                     </p-tabPanel>
                 </p-tabView>
@@ -40,7 +48,7 @@
     </section>
 
     <p-divider></p-divider>
-    <section data-anchor="Tipos" id="Tipos" class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
+    <section data-anchor="Tipos" id="Tipos " class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page ">
         <div class="w-10 lg:w-7 ">
             <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Tipos de errores</h1>
             <p-divider align="center"><span class="p-tag lg:text-lg ">Tipos</span> </p-divider>
@@ -60,8 +68,12 @@
                         </p>
                     </p-tabPanel>
                     <p-tabPanel header="Redondeo " tooltip="Errores de redondeo (representación finita de datos) ">
-                        <p class="text-center text-xl lg:text-2xl ">Se deben a que solo pueden presentar cantidades con un numero finito de dígitos.
+                        <p class="text-center text-xl lg:text-2xl ">Se deben a que solo pueden presentar cantidades con un numero finito de dígitos, puede ser del tipo:
                         </p>
+                        <ul class=" list-none lg:text-2xl text-center flex flex-column align-items-center">
+                            <li><span class="font-bold">Truncado: </span>El cual no toma en cuenta el valor de las cifras excluidas</li>
+                            <li><span class="font-bold">Simétrico: </span>Tiene en cuenta los digitos suprimidos para cambiar el valor de los digitos conservados.</li>
+                        </ul>
                     </p-tabPanel>
                     <p-tabPanel header="Propagación " tooltip="Errores de propagación (errores acumulados) ">
                         <p class="text-center text-xl lg:text-2xl ">Es un procedimiento por medio del cual, asignamos un error a los resultados obtenidos, tras la aplicación de una fórmula física es decir aquellas medidas que obtenemos indirectamente teniendo como entrada datos experimentales los
@@ -75,27 +87,27 @@
     </section>
 
     <p-divider></p-divider>
-    <section data-anchor="Aproximacion" id="Aproximacion " class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
-        <div class="w-10 lg:w-7">
-            <h1 class="text-center text-4xl lg:text-6xl mb-5">Aproximación numérica</h1>
+    <section data-anchor="Aproximacion" id="Aproximacion " class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page ">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Aproximación numérica</h1>
             <p-divider align="center">
-                <span class="p-tag lg:text-lg">Conceptos</span></p-divider>
-            <div class="mt-5">
-                <p-tabView [scrollable]="true">
-                    <p-tabPanel header="Cifras significativas" tooltip="Cifras significativas">
-                        <p class="text-center text-xl lg:text-2xl">Son aquellas empleadas de forma contable para determinar la confiabilidad de un valor numérico.</p>
+                <span class="p-tag lg:text-lg ">Conceptos</span></p-divider>
+            <div class="mt-5 ">
+                <p-tabView [scrollable]="true ">
+                    <p-tabPanel header="Cifras significativas " tooltip="Cifras significativas ">
+                        <p class="text-center text-xl lg:text-2xl ">Son aquellas empleadas de forma contable para determinar la confiabilidad de un valor numérico.</p>
 
                     </p-tabPanel>
-                    <p-tabPanel header="Exactitud" tooltip="Exactitud">
-                        <p class="text-center text-xl lg:text-2xl"> <span class="font-bold"> Exactitud: </span>Cercanía de un valor medido o calculado con un valor real.</p>
-                        <p class="text-center text-xl lg:text-2xl mt-3"><span class="font-bold"> Inexactitud (sesgo): </span>desviación sistemática del error.</p>
+                    <p-tabPanel header="Exactitud " tooltip="Exactitud ">
+                        <p class="text-center text-xl lg:text-2xl "> <span class="font-bold "> Exactitud: </span>Cercanía de un valor medido o calculado con un valor real.</p>
+                        <p class="text-center text-xl lg:text-2xl mt-3 "><span class="font-bold "> Inexactitud (sesgo): </span>Desviación sistemática del error.</p>
                     </p-tabPanel>
-                    <p-tabPanel header="Presición" tooltip="Presición">
-                        <p class="text-center text-xl lg:text-2xl"> <span class="font-bold"> Presición: </span>Cercanía entre los valores.</p>
-                        <p class="text-center text-xl lg:text-2xl mt-3"><span class="font-bold"> Impresición (Incertidumbre): </span>Dispersión de los puntos o valores.</p>
+                    <p-tabPanel header="Presición " tooltip="Presición ">
+                        <p class="text-center text-xl lg:text-2xl "> <span class="font-bold "> Presición: </span>Cercanía entre los valores.</p>
+                        <p class="text-center text-xl lg:text-2xl mt-3 "><span class="font-bold "> Impresición (Incertidumbre): </span>Dispersión de los puntos o valores.</p>
                     </p-tabPanel>
-                    <p-tabPanel header="Convergencia" tooltip="Convergencia">
-                        <p class="text-center text-xl lg:text-2xl">El grado de que al realizar un buen número de repeticiones las aproximaciones obtenidas terminan por acercarse cada vez más al verdadero valor buscado.
+                    <p-tabPanel header="Convergencia " tooltip="Convergencia ">
+                        <p class="text-center text-xl lg:text-2xl ">El grado de que al realizar un buen número de repeticiones las aproximaciones obtenidas terminan por acercarse cada vez más al verdadero valor buscado.
                         </p>
                     </p-tabPanel>
                 </p-tabView>
@@ -105,7 +117,7 @@
     </section>
 
     <p-divider></p-divider>
-    <section data-anchor="Calculo" id="Calculo" class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
+    <section data-anchor="Calculo" id="Calculo " class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page ">
         <div class="w-10 lg:w-7 ">
             <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Cálculo del error</h1>
             <p-divider align="center"><span class="p-tag lg:text-lg ">Tipos</span> </p-divider>
@@ -117,7 +129,7 @@
                         </p>
 
                         <p class="text-center text-xl lg:text-2xl mt-4 ">
-                            EA = | Valor verdadero - Valor aproximado |
+                            E<sub>a</sub> = | Valor verdadero - Valor aproximado |
                         </p>
 
                     </p-tabPanel>
@@ -126,7 +138,7 @@
                             porque puede ser por exceso o por defecto. no tiene unidades. Y el error relativo como
                         </p>
                         <div class="text-center text-xl lg:text-2xl mt-4 ">
-                            ER =
+                            E<sub>r</sub> =
                             <div class="fraction ">
                                 <span class="fup ">| Valor verdadero - Valor aproximado |</span>
                                 <span class="fdn ">Valor verdadero</span>
@@ -140,7 +152,7 @@
                         <p class="text-center text-xl lg:text-2xl ">El error relativo también se puede multiplicar por el 100% para expresarlo como:
                         </p>
                         <div class="text-center text-xl lg:text-2xl mt-4 ">
-                            ER% =
+                            E<sub>r%</sub> =
                             <div class="fraction ">
                                 <span class="fup ">| Valor verdadero - Valor aproximado |</span>
                                 <span class="fdn ">Valor verdadero</span>
@@ -152,6 +164,56 @@
                         </p>
                     </p-tabPanel>
                 </p-tabView>
+            </div>
+
+        </div>
+    </section>
+
+    <p-divider></p-divider>
+    <section data-anchor="Ejemplo" id="Ejemplo " class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page ">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Ejemplo</h1>
+            <p-divider align="center">
+                <span class="p-tag lg:text-lg ">Enunciado</span></p-divider>
+            <div class="mt-5 ">
+                <p class="text-center text-xl lg:text-2xl ">
+                    Utilizando la aritmética de punto flotante realizar la siguiente expresión.
+                </p>
+                <div class="text-center text-xl lg:text-2xl mt-4 ">
+                    <div class="fraction ">
+                        <span class="fup ">8</span>
+                        <span class="fdn ">3</span>
+                    </div>
+                    *
+                    <div class="fraction ">
+                        <span class="fup ">1</span>
+                        <span class="fdn ">7</span>
+                    </div>
+                </div>
+                <p class="text-center text-xl lg:text-2xl ">Haga uso de redondeo a 4 dígitos decimales y posteriormente calcule el error.</p>
+            </div>
+
+            <p-divider align="center">
+                <span class="p-tag lg:text-lg ">Solución</span></p-divider>
+            <p class="text-center text-xl lg:text-2xl ">
+                Redondeo Simétrico: 0,3810 * 10<sup>0</sup> <br> E = 4,7 * 10<sup>-5</sup><br> Redondeo Truncado: 0,3809 * 10<sup>0</sup><br> E = 5,2 * 10<sup>-5</sup>
+            </p>
+
+        </div>
+    </section>
+
+    <p-divider></p-divider>
+    <section data-anchor="Referencias" id="Referencias " class="flex flex-column justify-content-center min-h-screen align-items-center py-5 pg-page ">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Referencias</h1>
+            <p-divider align="center"><span class="p-tag lg:text-lg ">Links</span> </p-divider>
+            <div class="mt-5 ">
+                <a href="https://www.monografias.com/trabajos106/teoria-erroress/teoria-erroress" class="text-black-alpha-90 text-xl text-center block my-4" target="_blank" rel="noopener noreferrer">
+                    https://www.monografias.com/trabajos106/teoria-erroress/teoria-erroress</a>
+                <a href="https://docplayer.es/98109139-Metodos-numericos-unidad-1-teoria-de-errores.html" class="text-black-alpha-90 text-xl text-center block my-4" target="_blank" rel="noopener noreferrer">
+                    https://docplayer.es/98109139-Metodos-numericos-unidad-1-teoria-de-errores.html</a>
+                <a href="https://www.edudevices.com.ar/download/articulos/comentarios/Articulo_punto_fijo.pdf" class="text-black-alpha-90 text-xl text-center block my-4" target="_blank" rel="noopener noreferrer">
+                    https://www.edudevices.com.ar/download/articulos/comentarios/Articulo_punto_fijo.pdf</a>
             </div>
 
         </div>
