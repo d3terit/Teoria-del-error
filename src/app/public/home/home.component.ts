@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     const pageWidth = document.documentElement.scrollWidth;
-    if (pageWidth > 800){
+    if (pageWidth >= 1200 && screen.width>screen.height){
       let body = document.body;
       let script = document.createElement('script');
       script.type = 'text/javascript';
