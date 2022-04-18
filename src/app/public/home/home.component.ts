@@ -10,14 +10,17 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    let body = document.body;
-    let script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.innerHTML = '';
-    script.src="assets/main.js";
-    script.async = true;
-    script.defer = true;
-    body.appendChild(script);
+    const pageWidth = document.documentElement.scrollWidth;
+    if (pageWidth > 800){
+      let body = document.body;
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.innerHTML = '';
+      script.src="assets/main.js";
+      script.async = true;
+      script.defer = true;
+      body.appendChild(script);
+    }
   }
   
 
