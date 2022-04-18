@@ -2,7 +2,14 @@
 
 * {
     padding: 0;
-    margin: 0
+    margin: 0;
+}
+
+.pg-wrapper {
+    overflow-y: hidden !important;
+    height: auto !important;
+    width: 100% !important;
+    padding-right: 0 !important;
 }
 
 .p-tabview .p-tabview-panels,
@@ -27,4 +34,8 @@
     .p-tabview .p-tabview-nav li .p-tabview-nav-link {
         font-size: 1rem;
     }
+}
+
+.pg-pips ul li a {
+    background: #dc3545 !important;
 }

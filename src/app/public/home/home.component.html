@@ -1,96 +1,159 @@
-<section class="flex flex-column justify-content-center h-screen align-items-center">
-    <div class="w-10 lg:w-7">
-        <h1 class="text-center text-4xl lg:text-7xl mb-5">Teoría del error</h1>
-        <p-divider align="center"><span class="p-tag lg:text-lg">Concepto</span></p-divider>
-        <p class="text-center text-xl lg:text-2xl">
-            La teoría de errores es la rama de la estadística matemática dedicada a la inferencia de conclusiones precisas sobre los valores numéricos de cantidades medidas aproximadamente, así como sobre los errores en las mediciones.
-        </p>
-    </div>
-</section>
-<p-divider></p-divider>
-<section class="flex flex-column justify-content-center h-screen align-items-center">
-    <div class="w-10 lg:w-7">
-        <h1 class="text-center text-4xl lg:text-6xl mb-5">Tipos de errores</h1>
-        <p-divider align="center"><span class="p-tag lg:text-lg">Tipos</span> </p-divider>
-        <div class="mt-5">
-            <p-tabView [scrollable]="true">
-                <p-tabPanel header="Incertidumbre" tooltip="Errores inherentes o de incertidumbre">
-                    <p class="text-center text-xl lg:text-2xl">Son errores que existen en los valores de los datos, causados por incertidumbre en las mediciones, por verdaderas equivocaciones, o por la naturaleza necesariamente aproximada de la representación, mediante un número finito de dígitos,
-                        de cantidades que no pueden representarse exactamente con el número de dígitos permisible.</p>
-
-                </p-tabPanel>
-                <p-tabPanel header="Truncamiento" tooltip="Errores de truncamiento (aproximación)">
-                    <p class="text-center text-xl lg:text-2xl"> Representan la diferencia entre una formulación matemática exacta de un problema y la aproximación dada por un método numérico</p>
-                </p-tabPanel>
-                <p-tabPanel header="Desbordamiento" tooltip="Errores de esbordamiento">
-                    <p class="text-center text-xl lg:text-2xl">Es un error que ocurre cuando un programa recibe un número, valor o variable fuera del alcance de su capacidad de manejo. Este tipo de error es algo común en la programación, especialmente cuando se trata de enteros u otros tipos numéricos
-                        de variables.
-                    </p>
-                </p-tabPanel>
-                <p-tabPanel header="Redondeo" tooltip="Errores de redondeo (representación finita de datos)">
-                    <p class="text-center text-xl lg:text-2xl">Se deben a que solo pueden presentar cantidades con un numero finito de dígitos
-                    </p>
-                </p-tabPanel>
-                <p-tabPanel header="Propagación" tooltip="Errores de propagación (errores acumulados)">
-                    <p class="text-center text-xl lg:text-2xl">Es un procedimiento por medio del cual, asignamos un error a los resultados obtenidos, tras la aplicación de una fórmula física es decir aquellas medidas que obtenemos indirectamente teniendo como entrada datos experimentales los cuales
-                        siempre tienen un nivel de incertidumbre conocido.
-                    </p>
-                </p-tabPanel>
-            </p-tabView>
+<div id="container" class="pg-container w-12">
+    <section data-anchor="Concepto" id="Concepto" class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page pg-active">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-7xl mb-5 ">Teoría del error</h1>
+            <p-divider align="center"><span class="p-tag lg:text-lg ">Concepto</span></p-divider>
+            <p class="text-center text-xl lg:text-2xl ">
+                La teoría de errores es la rama de la estadística matemática dedicada a la inferencia de conclusiones precisas sobre los valores numéricos de cantidades medidas aproximadamente, así como sobre los errores en las mediciones.
+            </p>
         </div>
+    </section>
 
-    </div>
-</section>
+    <p-divider></p-divider>
+    <section data-anchor="Representacion" id="Representacion " class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
+        <div class="w-10 lg:w-7">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5">Representación numérica</h1>
+            <p-divider align="center"><span class="p-tag lg:text-lg">Introducción</span> </p-divider>
+            <div class="mt-5">
+                <p-tabView>
+                    <p-tabPanel header="Conversión" tooltip="Conversión de base numeral">
+                        <p class="text-center text-xl lg:text-2xl">Son errores que existen en los valores de los datos, causados por incertidumbre en las mediciones, por verdaderas equivocaciones, o por la naturaleza necesariamente aproximada de la representación, mediante un número finito de
+                            dígitos, de cantidades que no pueden representarse exactamente con el número de dígitos permisible.</p>
 
-<p-divider></p-divider>
-<section class="flex flex-column justify-content-center h-screen align-items-center">
-    <div class="w-10 lg:w-7">
-        <h1 class="text-center text-4xl lg:text-6xl mb-5">Cálculo del error</h1>
-        <p-divider align="center"><span class="p-tag lg:text-lg">Tipos</span> </p-divider>
-        <div class="mt-5">
-            <p-tabView>
-                <p-tabPanel header="Absoluto" tooltip="Error absoluto">
-                    <p class="text-center text-xl lg:text-2xl">Es la diferencia entre el valor de la medida y el valor tomado como exacto. Puede ser positivo o negativo, según si la medida es superior al valor real o inferior (la resta sale positiva o negativa). Tiene unidades, las mismas que
-                        las de la medida. Sin embargo, para facilitar el manejo y el análisis se emplea el error absoluto definido como:
-                    </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Fraccionarios" tooltip="Conversión de fraccionarios">
+                        <p class="text-center text-xl lg:text-2xl"> Representan la diferencia entre una formulación matemática exacta de un problema y la aproximación dada por un método numérico.</p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Punto fijo" tooltip="Representación de punto fijo">
+                        <p class="text-center text-xl lg:text-2xl">Es un error que ocurre cuando un programa recibe un número, valor o variable fuera del alcance de su capacidad de manejo. Este tipo de error es algo común en la programación, especialmente cuando se trata de enteros u otros tipos
+                            numéricos de variables.
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Punto flotante" tooltip="Representación de punto flotante">
+                        <p class="text-center text-xl lg:text-2xl">Se deben a que solo pueden presentar cantidades con un numero finito de dígitos.
+                        </p>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
 
-                    <p class="text-center text-xl lg:text-2xl mt-4">
-                        EA = | P* - P |
-                    </p>
-
-                </p-tabPanel>
-                <p-tabPanel header=" Relativo " tooltip="Error relativo ">
-                    <p class="text-center text-xl lg:text-2xl ">Es el cociente (la división) entre el error absoluto y el valor exacto. Si se multiplica por 100 se obtiene el tanto por ciento (%) de error. Al igual que el error absoluto puede ser positivo o negativo (según lo sea el error absoluto)
-                        porque puede ser por exceso o por defecto. no tiene unidades. Y el error relativo como
-                    </p>
-                    <div class="text-center text-xl lg:text-2xl mt-4">
-                        ER =
-                        <div class="fraction">
-                            <span class="fup">| P* - P |</span>
-                            <span class="fdn">P</span>
-                        </div>
-                    </div>
-                    <p class="text-center text-xl mt-3">
-                        Si P es diferente de 0
-                    </p>
-                </p-tabPanel>
-                <p-tabPanel header="Relativo porcentual " tooltip="Error relativo porcentual ">
-                    <p class="text-center text-xl lg:text-2xl ">El error relativo también se puede multiplicar por el 100% para expresarlo como:
-                    </p>
-                    <div class="text-center text-xl lg:text-2xl mt-4">
-                        ER% =
-                        <div class="fraction">
-                            <span class="fup">| P* - P |</span>
-                            <span class="fdn">P</span>
-                        </div>
-                        * 100
-                    </div>
-                    <p class="text-center text-xl mt-3">
-                        Si P es diferente de 0
-                    </p>
-                </p-tabPanel>
-            </p-tabView>
         </div>
+    </section>
 
-    </div>
-</section>
+    <p-divider></p-divider>
+    <section data-anchor="Tipos" id="Tipos" class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Tipos de errores</h1>
+            <p-divider align="center"><span class="p-tag lg:text-lg ">Tipos</span> </p-divider>
+            <div class="mt-5 ">
+                <p-tabView [scrollable]="true ">
+                    <p-tabPanel header="Incertidumbre " tooltip="Errores inherentes o de incertidumbre ">
+                        <p class="text-center text-xl lg:text-2xl ">Son errores que existen en los valores de los datos, causados por incertidumbre en las mediciones, por verdaderas equivocaciones, o por la naturaleza necesariamente aproximada de la representación, mediante un número finito de
+                            dígitos, de cantidades que no pueden representarse exactamente con el número de dígitos permisible.</p>
+
+                    </p-tabPanel>
+                    <p-tabPanel header="Truncamiento " tooltip="Errores de truncamiento (aproximación) ">
+                        <p class="text-center text-xl lg:text-2xl "> Representan la diferencia entre una formulación matemática exacta de un problema y la aproximación dada por un método numérico.</p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Desbordamiento " tooltip="Errores de esbordamiento ">
+                        <p class="text-center text-xl lg:text-2xl ">Es un error que ocurre cuando un programa recibe un número, valor o variable fuera del alcance de su capacidad de manejo. Este tipo de error es algo común en la programación, especialmente cuando se trata de enteros u otros tipos
+                            numéricos de variables.
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Redondeo " tooltip="Errores de redondeo (representación finita de datos) ">
+                        <p class="text-center text-xl lg:text-2xl ">Se deben a que solo pueden presentar cantidades con un numero finito de dígitos.
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Propagación " tooltip="Errores de propagación (errores acumulados) ">
+                        <p class="text-center text-xl lg:text-2xl ">Es un procedimiento por medio del cual, asignamos un error a los resultados obtenidos, tras la aplicación de una fórmula física es decir aquellas medidas que obtenemos indirectamente teniendo como entrada datos experimentales los
+                            cuales siempre tienen un nivel de incertidumbre conocido.
+                        </p>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+
+        </div>
+    </section>
+
+    <p-divider></p-divider>
+    <section data-anchor="Aproximacion" id="Aproximacion " class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
+        <div class="w-10 lg:w-7">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5">Aproximación numérica</h1>
+            <p-divider align="center">
+                <span class="p-tag lg:text-lg">Conceptos</span></p-divider>
+            <div class="mt-5">
+                <p-tabView [scrollable]="true">
+                    <p-tabPanel header="Cifras significativas" tooltip="Cifras significativas">
+                        <p class="text-center text-xl lg:text-2xl">Son aquellas empleadas de forma contable para determinar la confiabilidad de un valor numérico.</p>
+
+                    </p-tabPanel>
+                    <p-tabPanel header="Exactitud" tooltip="Exactitud">
+                        <p class="text-center text-xl lg:text-2xl"> <span class="font-bold"> Exactitud: </span>Cercanía de un valor medido o calculado con un valor real.</p>
+                        <p class="text-center text-xl lg:text-2xl mt-3"><span class="font-bold"> Inexactitud (sesgo): </span>desviación sistemática del error.</p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Presición" tooltip="Presición">
+                        <p class="text-center text-xl lg:text-2xl"> <span class="font-bold"> Presición: </span>Cercanía entre los valores.</p>
+                        <p class="text-center text-xl lg:text-2xl mt-3"><span class="font-bold"> Impresición (Incertidumbre): </span>Dispersión de los puntos o valores.</p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Convergencia" tooltip="Convergencia">
+                        <p class="text-center text-xl lg:text-2xl">El grado de que al realizar un buen número de repeticiones las aproximaciones obtenidas terminan por acercarse cada vez más al verdadero valor buscado.
+                        </p>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+
+        </div>
+    </section>
+
+    <p-divider></p-divider>
+    <section data-anchor="Calculo" id="Calculo" class="flex flex-column justify-content-center h-screen align-items-center py-5 pg-page">
+        <div class="w-10 lg:w-7 ">
+            <h1 class="text-center text-4xl lg:text-6xl mb-5 ">Cálculo del error</h1>
+            <p-divider align="center"><span class="p-tag lg:text-lg ">Tipos</span> </p-divider>
+            <div class="mt-5 ">
+                <p-tabView>
+                    <p-tabPanel header="Absoluto " tooltip="Error absoluto ">
+                        <p class="text-center text-xl lg:text-2xl ">Es la diferencia entre el valor de la medida y el valor tomado como exacto. Puede ser positivo o negativo, según si la medida es superior al valor real o inferior (la resta sale positiva o negativa). Tiene unidades, las mismas
+                            que las de la medida. Sin embargo, para facilitar el manejo y el análisis se emplea el error absoluto definido como:
+                        </p>
+
+                        <p class="text-center text-xl lg:text-2xl mt-4 ">
+                            EA = | Valor verdadero - Valor aproximado |
+                        </p>
+
+                    </p-tabPanel>
+                    <p-tabPanel header=" Relativo " tooltip="Error relativo ">
+                        <p class="text-center text-xl lg:text-2xl ">Es el cociente (la división) entre el error absoluto y el valor exacto. Si se multiplica por 100 se obtiene el tanto por ciento (%) de error. Al igual que el error absoluto puede ser positivo o negativo (según lo sea el error absoluto)
+                            porque puede ser por exceso o por defecto. no tiene unidades. Y el error relativo como
+                        </p>
+                        <div class="text-center text-xl lg:text-2xl mt-4 ">
+                            ER =
+                            <div class="fraction ">
+                                <span class="fup ">| Valor verdadero - Valor aproximado |</span>
+                                <span class="fdn ">Valor verdadero</span>
+                            </div>
+                        </div>
+                        <p class="text-center text-xl mt-3 ">
+                            Si el valor verdadero es diferente de 0
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Relativo porcentual " tooltip="Error relativo porcentual ">
+                        <p class="text-center text-xl lg:text-2xl ">El error relativo también se puede multiplicar por el 100% para expresarlo como:
+                        </p>
+                        <div class="text-center text-xl lg:text-2xl mt-4 ">
+                            ER% =
+                            <div class="fraction ">
+                                <span class="fup ">| Valor verdadero - Valor aproximado |</span>
+                                <span class="fdn ">Valor verdadero</span>
+                            </div>
+                            * 100%
+                        </div>
+                        <p class="text-center text-xl mt-3 ">
+                            Si el valor verdadero es diferente de 0
+                        </p>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+
+        </div>
+    </section>
+</div>

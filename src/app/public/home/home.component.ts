@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    let body = document.body;
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.innerHTML = '';
+    script.src="assets/main.js";
+    script.async = true;
+    script.defer = true;
+    body.appendChild(script);
   }
+  
 
 }
